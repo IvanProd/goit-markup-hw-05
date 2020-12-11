@@ -1,0 +1,402 @@
+/*=====Переременные по сайту=====*/
+:root {
+    /*общее*/
+    --acent-color: #2196F3;/*использует logo; hover; focus; hero-bottom */
+    
+    /*шапка*/
+    --acent-color: #2196F3;
+    --black-color: #000000;
+    --navigation-color: #212121;
+    --contact-link: #757575;
+    --border-line: 1px solid #ECECEC;
+    --navigation-color-link: #212121;
+    
+    /*герой*/
+    --hero-background-color: #C4C4C4;
+    --hero-text-color: #fff;
+
+    /*особенности*/
+    --bgcolor-feature-icon: #F5F4FA;
+    --feature-text-color: #757575;
+    --reature-head-color: #212121;
+
+    /*чем мы занимаемся*/
+    --head-color: #212121;
+    --item-bgcolor: #757575;
+    
+    /*наша команда*/
+    --bgcolor-section-our-team: #F5F4FA;
+    --head-color: #212121;
+}
+/*===============================*/
+
+/*=====глобальный сброс=====*/
+ul,li,p,figure,figcaption,h1,h2,h3,p{
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    
+}
+/*====СКРЫВАЕМ ОГЛАВЛЕНИЯ СЕКЦИЙ====*/
+.header-section{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/*=====техническая обводка=====*/
+/*==== outline: 1px green; ====*/
+
+/*=============================*/
+
+.mani-pag {
+    width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*=====ШАПКА=====*/
+.heder {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: var(--border-line);
+    
+}
+.heder-section {
+    display: flex;
+    padding-left: 215px;
+    padding-right: 215px;
+}
+/*===ЛОГОТИП===*/
+.logo {
+
+    margin: 24px 93px 25px 0;
+}
+/*левая сторона*/
+.logo-left {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.192;
+
+    letter-spacing: 0.03em;
+    color: var(--acent-color);
+}
+/*правая сторона*/
+.logo-right {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.192;
+
+    letter-spacing: 0.03em;
+    color: var(--black-color);
+}
+/*===ГЛАВНАЯ НАВИГАЦИЯ===*/
+.maine-navigation {
+    /*background-color: yellow;*/
+    padding: 32px 0 32px 0;
+    margin: 0 305px 0 0;
+}
+/*список навигации*/
+.navigation-list {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
+
+    display: flex;
+}
+/*элементы навигации*/
+.navigation-item:not(:last-child) {
+    margin-right: 50px;
+}
+/*сылки навигации*/
+.navigation-link {
+    color: var(--navigation-color-link);
+}
+.navigation-link:hover,
+.navigation-link:focus {
+    color: var(--acent-color);
+}
+/*===ССЫЛКИ КОНТАКТЫ===*/
+.address {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
+
+    padding: 32px 0 32px 0;
+    /*background-color: palevioletred;*/
+}
+/*ссылка почта*/
+.contact-link-mail {
+    color: var(--contact-link);
+    margin-right: 30px;
+}
+/*?.contact-link-mail::before { */
+/*?  display: inline-block; */
+/*?   margin-right: 10px; */
+/*?   background-image: url("../svg/icons/envelope.svg"); */
+/*? color: var(--contact-link); */
+/*? } */
+.contact-link-mail:hover,
+.contact-link-mail:focus {
+    color: var(--acent-color);
+}
+/*ссылка телефон*/
+.contact-link-telephon{
+    color: var(--contact-link);
+}
+.contact-link-telephon:hover,
+.contact-link-telephon:focus {
+    color: var(--acent-color);
+}
+/*###########################################################*/
+
+/*=====ГЛАВНЫЙ КОНТЕНТ=====*/
+
+/*====ГЕРОЙ===*/
+
+/*контейнер героя*/
+.conteiner-hero {
+    min-width: 1600px;
+    min-height: 600px;
+    /*background-color: var(--hero-background-color);*/
+}
+/*оформление секции герой и фона*/
+.hero {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-color: var(--hero-background-color);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main/hero_background/background.jpg");
+}
+/*оглавление георя*/
+/*оглавление секции*/
+/*смотри строка №29 */
+
+/*слоган*/
+.hero-text {
+    width: 696px;
+    min-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.363;
+    letter-spacing: 0.06em;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--hero-text-color);
+
+}
+/*кнопка*/
+.hero-bottom {
+    padding: 0;
+    width: 200px;
+    min-height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    background-color: var(--acent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*текст кнопки*/
+.hero-bottom-text {
+    font-family: var(--maine-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.875;
+    color: var(--hero-text-color);
+    letter-spacing: 0.06em;
+}
+
+/*===ОСОБЕННОСТИ===*/
+
+/*контейнер секции особнности*/
+.conteiner-features {
+    margin-top: 94px;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*секция особенности*/
+.features {
+    width: 1170px;
+    min-height: 251px;
+    margin: 0 auto 0 auto;
+}
+/*оглавление особенности*/
+/*оглавление секции*/
+/*смотри строка №29 */
+
+/*список особенностей*/
+.features-list {
+    display: flex;
+}
+/*элементы списка*/
+.features-item {
+    max-width: 270px;
+    
+}
+.item-margin {
+    margin-right: 30px;
+}
+/*иконки элемента*/
+.features-icon {
+    width: 270px;
+    height: 120px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--bgcolor-feature-icon);
+}
+/*шапка элемента*/
+.features-head {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--reature-head-color);
+
+    margin-top: 30px;
+}
+/*текст элемента*/
+.fearures-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+
+    color: var(--feature-text-color);
+
+    margin-top: 10px;
+}
+
+/*===Чем мы занимаемся===*/
+/*контейнер чем мы занимаемся*/
+.conteiner-wedo {
+    max-width: 1700px;
+    margin: 94px auto 0 auto;
+
+}
+/*секция чем мы занимаеся*/
+.wedo {
+    width: 1600px;
+    min-height: 386px;
+    margin: 0 auto 0 auto;
+}
+/*оглавление секции*/
+.header-wedo {
+    margin: 0 auto 50px auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.166;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--head-color);
+}
+/*список секции*/
+.wedo-list {
+    list-style: none;
+    width: 1170px;
+    margin: 0 auto 0 auto;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+/*элемент списка*/
+.wedo-item {
+    width: 370px;
+    height: 294px;
+    background-color: var(--item-bgcolor);
+}
+
+/*===наша команда===*/
+
+/*контейнер наша команда*/
+.conteiner-our-team {
+}
+/*секция наша команда*/
+.our-team {
+}
+/*оглавление секции*/
+.header-our-team {
+}
+/*список наша команда*/
+.list-our-team {
+}
+/*элемент списка*/
+.item-list-our-team {
+}
+/*карточка*/
+.card {
+}
+.card-caption {
+}
+.card-header {
+}
+.card-text {
+}
+/*иконки карточке соц. ситей*/
+.card-social-icon {
+}
+.social-icon {
+}
+
+/*=========================*/
+
+/*=====ПОДВАЛ=====*/
+
+/*================*/
+
+
+
