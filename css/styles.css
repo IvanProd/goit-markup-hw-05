@@ -126,6 +126,7 @@ a {
 }
 .conteiner-header {
     max-width: 1200px;
+    height: 80px;
     display: flex;
     align-items: center;
     margin: 0 auto 0 auto;
@@ -160,9 +161,12 @@ a {
 }
 /*===ГЛАВНАЯ НАВИГАЦИЯ===*/
 .maine-navigation {
+
     /*background-color: yellow;*/
-    padding: 32px 0 32px 0;
+    
     margin: 0 305px 0 0;
+
+    /*outline: 1px solid red;*/
 }
 /*список навигации*/
 .navigation-list {
@@ -174,18 +178,42 @@ a {
     letter-spacing: 0.02em;
 
     display: flex;
+
+    /*outline: 1px solid gold;*/
 }
 /*элементы навигации*/
+.navigation-item{
+    position: relative;
+    padding: 32px 0 32px 0;
+    /*outline: 1px solid rgb(31, 42, 139);*/
+}
 .navigation-item:not(:last-child) {
     margin-right: 50px;
 }
 /*сылки навигации*/
 .navigation-link {
     color: var(--navigation-color-link);
+
+    /*outline: 1px solid green;*/
 }
+
 /*фокус текущей странички */
 .accent {
     color: var(--acent-color);
+}
+
+.accent::after{
+    content: "";
+
+    position: absolute;
+    /*left: 0;*/
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--acent-color);
+    border-radius: 2px;
 }
 .navigation-link:hover,
 .navigation-link:focus {
