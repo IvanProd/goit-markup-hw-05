@@ -444,10 +444,16 @@
         
         <!--модальное окно-->
         <div class="backdrop is-hidden" data-backdrop>
-            <div class="modal-port">Lorem ipsum dolor sit amet.</div>
+            <div class="modal-port">
+                <div class="round" data-close-modal>
+                    <svg class="close-icon">
+                        <use href="./images/icon.svg#Close"></use>
+                    </svg>
+                </div>
+            </div>
         </div>
         <!--скрипт открытия закрытия окна-->
-        <script>
+       <script>
             const refs = {
               openModalBtn: document.querySelector('[data-open-modal]'),
               closeModalBtn: document.querySelector('[data-close-modal]'),
