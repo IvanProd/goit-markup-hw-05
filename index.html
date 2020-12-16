@@ -55,7 +55,7 @@
                     <!--слоган-->
                     <p class="hero-text">Эффективные решения для вашего бизнеса</p>
                     <!--кнопка и ее текст-->
-                    <button type="button" class="hero-botton"> 
+                    <button type="button" class="hero-botton" data-open-modal> 
                         <span class="botton-text">Заказать услугу</span> 
                     </button>   
                 </div>
@@ -443,9 +443,30 @@
         </footer>
         
         <!--модальное окно-->
-        <div class="backdrop">
+        <div class="backdrop is-hidden" data-backdrop>
             <div class="modal-port">Lorem ipsum dolor sit amet.</div>
         </div>
+        <!--скрипт открытия закрытия окна-->
+        <script>
+            const refs = {
+              openModalBtn: document.querySelector('[data-open-modal]'),
+              closeModalBtn: document.querySelector('[data-close-modal]'),
+              backdrop: document.querySelector('[data-backdrop]'),
+            };
+      
+            refs.openModalBtn.addEventListener('click', toggleModal);
+            refs.closeModalBtn.addEventListener('click', toggleModal);
+      
+            refs.backdrop.addEventListener('click', logBackdropClick);
+      
+            function toggleModal() {
+              refs.backdrop.classList.toggle('is-hidden');
+            }
+      
+            function logBackdropClick() {
+              console.log('Это клик в бекдроп');
+            }
+        </script>
     </div>
 </body>
 </html>
