@@ -208,23 +208,6 @@ a {
     color: var(--acent-color);
     
 }
-
-.navigation-link::after{
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    opacity: 0.3;
-
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--acent-color);
-    border-radius: 2px;
-}
-
 .accent::after{
     content: "";
 
@@ -238,6 +221,26 @@ a {
     background-color: var(--acent-color);
     border-radius: 2px;
 }
+.navigation-link::after{
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    opacity: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--acent-color);
+    border-radius: 2px;
+}
+.navigation-link:hover::after,
+.navigation-link:focus::after {
+    opacity: 1;
+}
+
 .navigation-link:hover,
 .navigation-link:focus {
     color: var(--acent-color);
