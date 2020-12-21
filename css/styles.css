@@ -1123,7 +1123,8 @@ a {
     right: 8px;
     width: 30px;
     height: 30px;
-    z-index: 30px;
+    
+    /*z-index: 30px;*/
 
     border: 1px solid var(--close-color);
     border-radius: 50%;
@@ -1135,6 +1136,6 @@ a {
 }
 /*иконка закрытия (кркстик)*/
 .close-icon{
-    width: 11px;
-    height: 11px;    
+    width: 12px;
+    height: 12px;    
 }
