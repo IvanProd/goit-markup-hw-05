@@ -1025,7 +1025,9 @@ a {
 }
 .project-card-thumb:hover>.thumb {
     position: absolute;
-    top: 0;
+    /*top: 0;*/
+    transform: translateY(-100%);
+    transition: transform 250ms;
     width: 100%;
     height: 100%;
 
@@ -1037,6 +1039,8 @@ a {
     width: 100%;
     height: 100%;
     padding: 63px 24px;
+    transition: transform 250ms;
+
     cursor: default;
     background-color: var(--thumb-background-color);
 }
