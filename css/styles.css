@@ -1039,7 +1039,7 @@ a {
                 1px 4px 6px rgba(0, 0, 0, 0.16);
     /*outline: 1px solid green;*/
 }
-.project-card:focus {
+.project-item:focus {
     
     width: 370px;
     height: 404px;  
@@ -1108,12 +1108,14 @@ a {
     left:50%;
     transform: translate(-50%, -50%) scale(1);
 
-    
+    padding: 40px;
 
     width: 528px;
     height: 581px;
     background-color: var(--hero-text-color);
-    /*padding: 8px;*/
+
+
+    /*outline: 1px solid red;*/
 }
 
 /*иконка закрытия*/
@@ -1133,9 +1135,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /*outline: 1px solid red;*/
 }
 /*иконка закрытия (кркстик)*/
 .close-icon{
     width: 12px;
-    height: 12px;    
+    height: 12px;  
+    
+    /*outline: 1px solid red;*/
 }
