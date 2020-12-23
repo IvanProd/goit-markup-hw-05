@@ -26,6 +26,8 @@
     /*чем мы занимаемся*/
     --head-color: #212121;
     --item-bgcolor: #757575;
+    --wedo-lable-bgcolor: rgba(47, 48, 58, 0.8);
+    --wedo-lable-text: #fff;
     
     /*наша команда*/
     --bgcolor-section-our-team: #F5F4FA;
@@ -149,17 +151,18 @@ a {
 }
 /*===ЛОГОТИП===*/
 .logo {
+    width: 145px;
     margin: 24px 93px 25px 0;
 }
 /*левая сторона*/
 .logo-left {
+
     font-family: var(--Raleway);
     font-style: normal;
     font-weight: bold;
     font-size: 26px;
     line-height: 1.192;
 
-    letter-spacing: 0.03em;
     color: var(--acent-color);
 }
 /*правая сторона*/
@@ -170,7 +173,7 @@ a {
     font-size: 26px;
     line-height: 1.192;
 
-    letter-spacing: 0.03em;
+    /*letter-spacing: 0.03em;*/
     color: var(--black-color);
 }
 /*===ГЛАВНАЯ НАВИГАЦИЯ===*/
@@ -277,6 +280,7 @@ a {
 }
 /*ссылка почта*/
 .contact-link-mail {
+    width: 161px;
     display: inline-flex;
     align-items: center;
     color: var(--contact-link);
@@ -297,6 +301,7 @@ a {
 /*ссылка телефон*/
 .contact-link-telephon{
     display: inline-flex;
+    width: 142px;
     align-items: center;
     color: var(--contact-link);
 }
@@ -514,9 +519,31 @@ a {
 }
 /*элемент списка*/
 .wedo-item {
+    position: relative;
     width: 370px;
     height: 294px;
     background-color: var(--item-bgcolor);
+}
+.wedo-label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+
+    background-color: var(--wedo-lable-bgcolor);
+}
+.wedo-lable-text {
+    font-family: var(--Roboto);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.142;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--wedo-lable-text);
 }
 
 /*===наша команда===*/
@@ -1121,8 +1148,8 @@ a {
     height: 100%; 
 
     opacity: 1;
-    transform: perspective(500px) rotateY(0deg) scale(1);
-    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform:  scale(1);
+    transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1)250ms;
      
     background-color: var(--backdrop-color);  
 }
@@ -1130,15 +1157,16 @@ a {
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
-    transform: perspective(400px) rotateY(90deg) scale(0);
+    transform: scale(0);
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*модальное окно*/
 .modal-port {
     position: absolute;
     top: 50%;
     left:50%;
-    transform: translate(-50%, -50%) scale(1);
-
+    transform: translate(-50%, -50%) scale(1) perspective(500px) rotateY(0deg);
+    transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px;
 
     width: 528px;
@@ -1147,6 +1175,18 @@ a {
 
 
     /*outline: 1px solid red;*/
+}
+.backdrop.is-hidden>.modal-port{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0) perspective(500px) rotateY(90deg);
+    transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+
+    width: 528px;
+    height: 581px;
+    background-color: var(--hero-text-color);  
 }
 
 /*иконка закрытия*/
