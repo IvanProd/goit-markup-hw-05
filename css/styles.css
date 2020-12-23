@@ -325,7 +325,6 @@ a {
 
 /*контейнер героя*/
 .hero {
-    max-width: 1600px;
     min-height: 600px;
     margin: 0 auto 0 auto;
     /*outline: 1px solid red;*/
@@ -335,7 +334,8 @@ a {
 /*оформление секции герой и фона*/
 .conteiner-hero {
     max-width: 1600px;
-    height: 600px;
+    min-width: 1200px;
+    min-height: 600px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
@@ -398,7 +398,6 @@ a {
     font-size: 16px;
     line-height: 1.875;
     color: var(--hero-text-color);
-    letter-spacing: 0.06em;
 }
 
 /*===ОСОБЕННОСТИ===*/
@@ -846,7 +845,6 @@ a {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.714;
-    letter-spacing: 0.03em;
 
     color: var(--logo-text-color);
 }
@@ -861,7 +859,6 @@ a {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.714;
-    letter-spacing: 0.03em;
 
     
 }
@@ -907,11 +904,16 @@ a {
     height: 44px;
     border-radius: 50%;
     background-color: var(--logo-text-color-10p);
-    color:var(--logo-text-color)
+    color:var(--logo-text-color);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*выдиление иконок соцсетей*/
 .connect-link:hover,
 .connect-link:focus {
+    border-radius: 50%;
     background-color: var(--acent-color);
 }
 /*иконка*/
