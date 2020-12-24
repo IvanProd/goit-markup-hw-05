@@ -118,9 +118,9 @@ a {
 }
 /*=============================*/
 
-/*##################################################*/
-/*#################### ПОТФОЛИО ####################*/
-/*##################################################*/
+/*#################################################*/
+/*#################### Главная ####################*/
+/*#################################################*/
 
 /*===КОНТЕЙНЕР ГЛАВНОЙ СТРАНИЦЫ===*/
 .mani-pag {
@@ -1076,6 +1076,7 @@ a {
 
     /*outline:1px solid tomato;*/
 }
+
 .thumb {
     position: absolute;
     top: 100%;
@@ -1117,7 +1118,7 @@ a {
     display: block;
     width: 370px;
     height: 404px;  
-    /*outline: 3px solid black;*/
+    outline: 2px solid black;
     background: #FFFFFF;
     /*border: 1px solid #EEEEEE;*/
     box-sizing: border-box;
@@ -1125,7 +1126,18 @@ a {
                 0px 4px 4px rgba(0, 0, 0, 0.06), 
                 1px 4px 6px rgba(0, 0, 0, 0.16);
     /*utline: 1px solid green;*/
-}   
+} 
+/**/ 
+.card-link:focus .thumb{
+    position: absolute;
+    /*top: 0;*/
+    transform: translateY(-100%);
+    transition: transform 250ms;
+    width: 100%;
+    height: 100%;
+
+    /*outline: 1px solid black;*/
+} 
 .caption{
     width: 322px;
     height: 70px;
