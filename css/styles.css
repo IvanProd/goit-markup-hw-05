@@ -1059,6 +1059,7 @@ a {
     /*технический*/
     /*outline: 1px solid red;*/
 }
+/*скрытие оверлея*/
 .project-card-thumb {
     position: relative;
     
@@ -1066,6 +1067,7 @@ a {
     
     /*outline:1px solid tomato;*/
 }
+/*оверлей по ховеру*/
 .project-card-thumb:hover>.thumb {
     position: absolute;
     /*top: 0;*/
@@ -1101,6 +1103,7 @@ a {
 
     /*outline: 1px solid teal;*/
 }
+/*ховер по карточке*/
 .project-card:hover {
     display: block;
     width: 370px;
@@ -1114,6 +1117,7 @@ a {
                 1px 4px 6px rgba(0, 0, 0, 0.16);
     /*outline: 1px solid green;*/
 }
+/*фокус по карточке*/
 .card-link:focus {
     display: block;
     width: 370px;
@@ -1127,7 +1131,7 @@ a {
                 1px 4px 6px rgba(0, 0, 0, 0.16);
     /*utline: 1px solid green;*/
 } 
-/**/ 
+/*оверлей по фокусу*/ 
 .card-link:focus .thumb{
     position: absolute;
     /*top: 0;*/
