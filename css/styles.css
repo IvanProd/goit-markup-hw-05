@@ -162,7 +162,8 @@ h1,h2,h3,h4,h5,h6,p,ul,li{
     background-color: var(--text-menu-accent);
     border-radius: 2px;
 }
-.navigation__link:hover::after{
+.navigation__link:hover::after,
+.navigation__link:focus::after{
     transform: translateY(33px) scaleX(1);
 }
 
@@ -693,6 +694,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li{
 }
 .portfoli__button:hover,
 .portfoli__button:focus {
+    outline: none;
     background: var(--portfolio-button-bgcolor-active);
     color: var(--portfolio-button-text-active-color);
 }
